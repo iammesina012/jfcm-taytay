@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arimo', sans-serif;
+}
+
+header {
+  background-color: #303D2A;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 80px;
+  padding: 0 40px;
+}
+
+.nav-container {
+  max-width: 100%;
+  padding: 0 40px;
+}
+
+.logo img {
+  height: 45px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a,
+.nav-right .login {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+}
+
+.has-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.dropdown-toggle .arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 6px;
+
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #ffffff;
+
+  position: relative;
+  top: -2px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+
+  background: #ffffff;
+  border-radius: 6px;
+  min-width: 120px;
+
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+
+  display: none;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 16px;
+  color: #303D2A;
+  text-decoration: none;
+  text-transform: none;
+  font-weight: 400;
+}
+
+.dropdown-menu li a:hover {
+  background: #f2f2f2;
+}
+
+.hero {
+  position: relative;
+  height: 80vh;
+
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive;
+}
+
+.hero-content h1 {
+  font-size: 100px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
