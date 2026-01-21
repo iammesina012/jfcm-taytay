@@ -1,3 +1,5 @@
+/* Base Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -8,11 +10,23 @@ body {
   font-family: 'Arimo', sans-serif;
 }
 
+/* Header */
+
 header {
   background-color: #303D2A;
   position: relative;
   z-index: 1000;
 }
+
+/* Logo  */
+
+.logo img {
+  height: 45px;
+  width: auto;
+  display: block;
+}
+
+/* Navigation Bar  */
 
 .navbar {
   display: flex;
@@ -28,11 +42,7 @@ header {
   padding: 0 40px;
 }
 
-.logo img {
-  height: 45px;
-  width: auto;
-  display: block;
-}
+/* Navigation Links  */
 
 .nav-links {
   list-style: none;
@@ -50,9 +60,13 @@ header {
   text-transform: uppercase;
 }
 
+/* Dropdown */
+
 .has-dropdown {
   position: relative;
 }
+
+/* Dropdown button */
 
 .dropdown-toggle {
   background: none;
@@ -64,6 +78,8 @@ header {
   text-transform: uppercase;
   cursor: pointer;
 }
+
+/* Dropdown arrow */
 
 .dropdown-toggle .arrow {
   display: inline-block;
@@ -78,6 +94,8 @@ header {
   position: relative;
   top: -2px;
 }
+
+/* Dropdown menu container */
 
 .dropdown-menu {
   position: absolute;
@@ -95,6 +113,8 @@ header {
   display: none;
 }
 
+/* Dropdown links */
+
 .dropdown-menu li a {
   display: block;
   padding: 10px 16px;
@@ -107,6 +127,8 @@ header {
 .dropdown-menu li a:hover {
   background: #f2f2f2;
 }
+
+/* Hero Section */
 
 .hero {
   position: relative;
@@ -141,12 +163,81 @@ header {
 .hero-content h1 {
   font-size: 100px;
   font-weight: 700;
-  letter-spacing: 0px;
   margin-bottom: 10px;
 }
 
 .hero-content p {
   font-size: 30px;
   font-weight: 400;
-  letter-spacing: 0px;
+}
+
+/* Who we are section */
+
+.who-we-are {
+  background-color: #ffffff;
+  padding: 50px 20px 50px;
+}
+
+.who-we-are-title {
+  margin-left: 50px;
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  color: #303D2A;
+}
+
+.who-we-are-intro,
+.who-we-are-description {
+  margin-left: 50px;
+  max-width: 700px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  text-align: left;
+  color: #000;
+
+}
+
+.who-we-are-image {
+  width: 300px;
+  height: 300px;
+
+  margin-left: auto;
+  margin-right: 0;
+
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Why we exist section */
+
+.why-we-exist {
+  background-color: #ffffff;
+  padding: 50px 20px 50px;
+}
+
+.why-we-exist-title {
+  margin-left: auto;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  max-width: 700px;
+  font-size: 50px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  text-align: right;
+  color: #303D2A;
+}
+
+.why-we-exist-description {
+  margin-left: auto;
+  margin-right: 50px;
+  max-width: 700px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  text-align: right;
+  color: #000;
 }
