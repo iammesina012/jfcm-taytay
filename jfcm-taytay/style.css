@@ -148,13 +148,11 @@ header {
 .hero-content {
   position: relative;
   z-index: 1;
-
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   color: #ffffff;
   text-align: center;
   font-family: "Comic Sans MS", cursive;
@@ -175,7 +173,10 @@ header {
 
 .who-we-are {
   background-color: #ffffff;
-  padding: 50px 20px 50px;
+  padding: 20px;
+
+  display: flex;            
+  align-items: center; 
 }
 
 .who-we-are-title {
@@ -197,25 +198,27 @@ header {
   line-height: 1.6;
   text-align: left;
   color: #000;
-
 }
 
 .who-we-are-image {
-  width: 300px;
-  height: 300px;
-
+  width: 475px;
+  height: 475px;
   margin-left: auto;
-  margin-right: 0;
-
-  object-fit: cover;
-  border-radius: 20px;
+  margin-right: 100px;
+  object-fit: contain;
 }
 
 /* Why we exist section */
 
 .why-we-exist {
   background-color: #ffffff;
-  padding: 50px 20px 50px;
+  padding: 20px ;
+}
+
+.why-we-exist-wrapped {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .why-we-exist-title {
@@ -240,4 +243,13 @@ header {
   line-height: 1.6;
   text-align: right;
   color: #000;
+}
+
+.why-we-exist-image {
+  width: 600px;
+  height: auto;
+  margin-left: 50px;
+  margin-right: auto;
+  object-fit: cover;
+  border-radius: 20px;
 }
