@@ -1,0 +1,142 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-page {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.login-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 100%;
+  filter: brightness(0.6);
+  z-index: 0;
+}
+
+/* CENTER THE LOGIN CARD */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LOGIN CARD */
+.login-card {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: stretch;
+  width: 1000px;
+  min-height: 600px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* LEFT SIDE */
+.login-left {
+  width: 30%;
+  background: #4A5E42;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px; 
+  
+  /* width: 40%;
+  background-image: url("../images/maam.jpg"); /* your image
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  position: relative; */
+}
+
+.login-left img {
+  width: 280px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+/* RIGHT SIDE */
+.login-right {
+  width: 60%;
+  padding: 50px;
+
+  padding-top: 80px;
+}
+
+.login-right h2 {
+  margin-bottom: 30px;
+}
+
+/* FORM ELEMENTS */
+.login-right label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.login-right input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* .login-right button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 25px;
+  background: #4A5E42;
+  color: white;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+} 
+
+.login-right button:hover {
+  opacity: 0.9;
+} */
+
+.login-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border-radius: 25px;
+  background: #4A5E42;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;   
+}
+
+.copyright {
+  margin-top: 40px;
+  font-size: 12px;
+  text-align: center;
+  color: #777;
+}
+
