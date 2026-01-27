@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JFCM Taytay - Profile</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <header>
+      <!--Navigation Bar-->
+      <nav class="navbar">
+        <div class="burger" id="burger">☰</div>
+        <div class="navbar-title">JFCM Taytay</div>
+      </nav>
+
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-logo">
+          <img src="../images/jfcm_white.png" alt="JFCM Logo" />
+        </div>
+
+        <div class="sidebar-section">
+          <h3 class="sidebar-section-title">MENU</h3>
+          <a href="dashboard.html"
+            ><i class="fas fa-chart-line"></i>Dashboard</a
+          >
+          <a href="teachings.html"><i class="fas fa-book"></i>Teachings</a>
+          <a href="jfcm-talks.html"
+            ><i class="fas fa-comments"></i>JFCM Talks</a
+          >
+        </div>
+
+        <div class="sidebar-section">
+          <h3 class="sidebar-section-title">SCHOOL OF WORKERS</h3>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-toggle" id="modulesToggle">
+              <i class="fas fa-scroll"></i>Modules
+              <span class="dropdown-arrow">▼</span>
+            </button>
+            <div class="sidebar-submenu" id="modulesSubmenu">
+              <a href="sow1.html"><i class="fas fa-folder"></i>SOW 1</a>
+              <a href="sow2.html"><i class="fas fa-folder"></i>SOW 2</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <h3 class="sidebar-section-title">SETTINGS</h3>
+          <a href="profile.html"><i class="fas fa-user-circle"></i>Profile</a>
+          <a href="../login/login.html" class="logout-btn"
+            ><i class="fas fa-sign-out-alt"></i>Logout</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="dashboard-main">
+      <h1 class="dashboard-title">Profile</h1>
+
+      <div class="profile-container">
+        <!-- Profile Picture Section -->
+        <div class="profile-picture-section">
+          <div class="profile-picture-wrapper">
+            <div class="profile-picture" id="profilePicture">
+              <i class="fas fa-user"></i>
+            </div>
+            <button class="profile-upload-btn" id="profileUploadBtn">
+              <i class="fas fa-camera"></i>
+            </button>
+            <input
+              type="file"
+              id="profileFileInput"
+              accept="image/*"
+              style="display: none"
+            />
+          </div>
+        </div>
+
+        <!-- User Information Section -->
+        <div class="profile-info-section">
+          <div class="profile-name-section">
+            <p class="profile-full-name">Marie Rye Detera</p>
+          </div>
+
+          <div class="profile-details-section">
+            <div class="profile-info-item">
+              <h3 class="profile-info-label">Username</h3>
+              <p class="profile-info-value">marieryedetera</p>
+            </div>
+
+            <div class="profile-info-item">
+              <h3 class="profile-info-label">Role</h3>
+              <p class="profile-info-value">Admin</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="dashboard.js"></script>
+    <script>
+      // Profile picture upload functionality
+      const profileUploadBtn = document.getElementById("profileUploadBtn");
+      const profileFileInput = document.getElementById("profileFileInput");
+      const profilePicture = document.getElementById("profilePicture");
+
+      profileUploadBtn.addEventListener("click", () => {
+        profileFileInput.click();
+      });
+
+      profileFileInput.addEventListener("change", (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            profilePicture.innerHTML = `<img src="${event.target.result}" alt="Profile Picture" />`;
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+    </script>
+  </body>
+</html>

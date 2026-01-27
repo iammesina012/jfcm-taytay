@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JFCM Taytay - Teachings</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <header>
+      <!--Navigation Bar-->
+      <nav class="navbar">
+        <div class="burger" id="burger">☰</div>
+        <div class="navbar-title">JFCM Taytay</div>
+      </nav>
+
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-logo">
+          <img src="../images/jfcm_white.png" alt="JFCM Logo" />
+        </div>
+
+        <div class="sidebar-section">
+          <h3 class="sidebar-section-title">MENU</h3>
+          <a href="dashboard.html"
+            ><i class="fas fa-chart-line"></i>Dashboard</a
+          >
+          <a href="teachings.html"><i class="fas fa-book"></i>Teachings</a>
+          <a href="jfcm-talks.html"
+            ><i class="fas fa-comments"></i>JFCM Talks</a
+          >
+        </div>
+
+        <div class="sidebar-section">
+          <h3 class="sidebar-section-title">SCHOOL OF WORKERS</h3>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-toggle" id="modulesToggle">
+              <i class="fas fa-scroll"></i>Modules
+              <span class="dropdown-arrow">▼</span>
+            </button>
+            <div class="sidebar-submenu" id="modulesSubmenu">
+              <a href="sow1.html"><i class="fas fa-folder"></i>SOW 1</a>
+              <a href="sow2.html"><i class="fas fa-folder"></i>SOW 2</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <h3 class="sidebar-section-title">SETTINGS</h3>
+          <a href="profile.html"><i class="fas fa-user-circle"></i>Profile</a>
+          <a href="../login/login.html" class="logout-btn"
+            ><i class="fas fa-sign-out-alt"></i>Logout</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="dashboard-main">
+      <h1 class="dashboard-title">Teachings</h1>
+
+      <div class="content-section">
+        <div class="search-container">
+          <input type="text" class="search-bar" placeholder="Search here..." />
+          <i class="fas fa-search search-icon"></i>
+        </div>
+
+        <div class="controls-container">
+          <div class="filters">
+            <div class="filter-group">
+              <label class="filter-label">Topic</label>
+              <select class="filter-select">
+                <option>Choose topic</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label class="filter-label">Sort</label>
+              <select class="filter-select">
+                <option>Newest</option>
+                <option>Oldest</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="upload-btn">
+            <i class="fas fa-upload"></i> Upload
+          </button>
+          <input
+            type="file"
+            id="fileInput"
+            class="file-input"
+            style="display: none"
+          />
+        </div>
+      </div>
+
+      <div class="content-list">
+        <div class="empty-state">
+          <i class="fas fa-inbox empty-icon"></i>
+          <p>No teachings or preachings available</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>
