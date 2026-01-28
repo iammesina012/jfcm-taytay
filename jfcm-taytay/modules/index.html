@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JFCM Taytay</title>
+    <title>JFCM Taytay - Modules</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +16,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="shared-styles.css" />
+    <link rel="stylesheet" href="../dashboard/shared-styles.css" />
+    <link rel="stylesheet" href="modules.css" />
   </head>
   <body>
     <header>
@@ -88,7 +89,7 @@
 
         <div class="sidebar-section">
           <h3 class="sidebar-section-title">MENU</h3>
-          <a href="dashboard/dashboard.html"
+          <a href="../dashboard/dashboard.html"
             ><i class="fas fa-chart-line"></i>Dashboard</a
           >
           <a href="../teachings/index.html"
@@ -107,9 +108,7 @@
               <span class="dropdown-arrow">▼</span>
             </button>
             <div class="sidebar-submenu" id="modulesSubmenu">
-              <a href="../modules/index.html"
-                ><i class="fas fa-folder"></i>Modules</a
-              >
+              <a href="index.html"><i class="fas fa-folder"></i>Modules</a>
               <a href="../sow1/index.html"
                 ><i class="fas fa-folder"></i>SOW 1</a
               >
@@ -136,51 +135,14 @@
     </header>
 
     <main class="dashboard-main">
-      <h1 class="dashboard-title">Dashboard</h1>
-
-      <div class="cards-grid">
-        <a href="../teachings/index.html" class="card-link">
-          <div class="card">
-            <div class="card-icon">
-              <i class="fas fa-book"></i>
-            </div>
-            <h3>Teachings</h3>
-            <p>Materials for Preaching & Teaching.</p>
-          </div>
-        </a>
-
-        <a href="../jfcm-talks/index.html" class="card-link">
-          <div class="card">
-            <div class="card-icon">
-              <i class="fas fa-comments"></i>
-            </div>
-            <h3>JFCM Talks</h3>
-            <p>Resources for Coaching and Mentoring.</p>
-          </div>
-        </a>
-
-        <a href="../modules/index.html" class="card-link">
-          <div class="card">
-            <div class="card-icon">
-              <i class="fas fa-briefcase"></i>
-            </div>
-            <h3>SOW Modules</h3>
-            <p>Materials for School of Workers & Trainings</p>
-          </div>
-        </a>
-
-        <a href="../profile/index.html" class="card-link">
-          <div class="card">
-            <div class="card-icon">
-              <i class="fas fa-user"></i>
-            </div>
-            <h3>Profile</h3>
-            <p>Manage your account and settings.</p>
-          </div>
-        </a>
-      </div>
+      <h1 class="dashboard-title">Modules</h1>
     </main>
 
-    <script src="shared-script.js"></script>
+    <script src="../dashboard/shared-script.js"></script>
+    <script src="modules.js"></script>
   </body>
 </html>
+
+
+
+

@@ -3,29 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JFCM Taytay</title>
-
+    <title>User Management - JFCM Taytay</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="../dashboard/shared-styles.css" />
+    <link rel="stylesheet" href="user-management.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="shared-styles.css" />
   </head>
   <body>
     <header>
-      <!--Navigation Bar-->
       <nav class="navbar">
         <div class="burger" id="burger">☰</div>
         <div class="navbar-title">JFCM Taytay</div>
       </nav>
-
       <div class="sidebar" id="sidebar">
         <div class="sidebar-logo">
           <img src="../images/jfcm_white.png" alt="JFCM Logo" />
@@ -88,7 +85,7 @@
 
         <div class="sidebar-section">
           <h3 class="sidebar-section-title">MENU</h3>
-          <a href="dashboard/dashboard.html"
+          <a href="../dashboard/dashboard.html"
             ><i class="fas fa-chart-line"></i>Dashboard</a
           >
           <a href="../teachings/index.html"
@@ -98,7 +95,6 @@
             ><i class="fas fa-comments"></i>JFCM Talks</a
           >
         </div>
-
         <div class="sidebar-section">
           <h3 class="sidebar-section-title">SCHOOL OF WORKERS</h3>
           <div class="sidebar-dropdown">
@@ -119,68 +115,69 @@
             </div>
           </div>
         </div>
-
         <div class="sidebar-section">
           <h3 class="sidebar-section-title">SETTINGS</h3>
           <a href="../profile/index.html"
             ><i class="fas fa-user-circle"></i>Profile</a
           >
-          <a href="../user-management/index.html"
-            ><i class="fas fa-users"></i>User Management</a
-          >
+          <a href="index.html"><i class="fas fa-users"></i>User Management</a>
           <a href="../login/login.html" class="logout-btn"
             ><i class="fas fa-sign-out-alt"></i>Logout</a
           >
         </div>
       </div>
     </header>
-
     <main class="dashboard-main">
-      <h1 class="dashboard-title">Dashboard</h1>
+      <div class="user-management-header">
+        <h1 class="dashboard-title" style="margin-bottom: 0">
+          User Management
+        </h1>
+        <button class="add-user-btn">+ Add User</button>
+      </div>
 
-      <div class="cards-grid">
-        <a href="../teachings/index.html" class="card-link">
-          <div class="card">
-            <div class="card-icon">
-              <i class="fas fa-book"></i>
+      <div
+        class="cards-grid"
+        style="max-width: 350px; grid-template-columns: 1fr"
+      >
+        <div class="user-card card">
+          <div>
+            <button class="menu-btn" id="menuBtn">⋮</button>
+            <div class="menu-dropdown" id="menuDropdown">
+              <a href="#">Update Details</a>
+              <a href="#">Delete User</a>
             </div>
-            <h3>Teachings</h3>
-            <p>Materials for Preaching & Teaching.</p>
           </div>
-        </a>
-
-        <a href="../jfcm-talks/index.html" class="card-link">
-          <div class="card">
-            <div class="card-icon">
-              <i class="fas fa-comments"></i>
-            </div>
-            <h3>JFCM Talks</h3>
-            <p>Resources for Coaching and Mentoring.</p>
+          <div
+            class="user-avatar"
+            style="
+              width: 80px;
+              height: 80px;
+              border-radius: 50%;
+              background-color: #4a5e42;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 40px;
+              color: #fff;
+              flex-shrink: 0;
+            "
+          >
+            <i class="fas fa-user"></i>
           </div>
-        </a>
-
-        <a href="../modules/index.html" class="card-link">
-          <div class="card">
-            <div class="card-icon">
-              <i class="fas fa-briefcase"></i>
-            </div>
-            <h3>SOW Modules</h3>
-            <p>Materials for School of Workers & Trainings</p>
+          <div class="user-info-container">
+            <h3 class="user-name">James Malinao</h3>
+            <p class="user-username">henreyjamesmalinao</p>
+            <p class="user-role">User</p>
           </div>
-        </a>
-
-        <a href="../profile/index.html" class="card-link">
-          <div class="card">
-            <div class="card-icon">
-              <i class="fas fa-user"></i>
-            </div>
-            <h3>Profile</h3>
-            <p>Manage your account and settings.</p>
-          </div>
-        </a>
+        </div>
       </div>
     </main>
 
-    <script src="shared-script.js"></script>
+    <script src="../dashboard/shared-script.js"></script>
+    <script src="user-management.js"></script>
   </body>
 </html>
+
+
+
+

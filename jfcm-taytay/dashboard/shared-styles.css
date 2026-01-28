@@ -56,7 +56,7 @@ header {
 
 .sidebar {
   position: fixed;
-  top: 80px; /* same height as navbar */
+  top: 80px;
   left: 0;
   width: 250px;
   height: calc(100vh - 80px);
@@ -100,13 +100,14 @@ header {
   margin-bottom: 25px;
 }
 
-/* Sidebar link spacing fix for Settings */
 .sidebar-section:last-child a {
   margin-bottom: 6px;
 }
+
 .sidebar-section:last-child a + a {
   margin-top: 0;
 }
+
 .sidebar-section:last-child a.logout-btn {
   margin-top: 12px;
 }
@@ -204,8 +205,6 @@ header {
   transform: translateX(0);
 }
 
-/* Dashboard Main Content */
-
 .dashboard-main {
   padding: 30px 20px;
   margin-left: 0;
@@ -283,8 +282,6 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-/* Content Section Styles */
 
 .content-section {
   margin-bottom: 30px;
@@ -418,6 +415,7 @@ header {
   font-size: 16px;
   color: #999;
 }
+
 /* Profile Page Styles */
 .profile-container {
   display: flex;
@@ -537,7 +535,6 @@ header {
   color: #303D2A;
 }
 
-/* Responsive Profile Page */
 @media (max-width: 768px) {
   .profile-container {
     flex-direction: column;
@@ -585,7 +582,6 @@ header {
   }
 }
 
-/* Fix sidebar positioning */
 html,
 body {
   height: 100%;
