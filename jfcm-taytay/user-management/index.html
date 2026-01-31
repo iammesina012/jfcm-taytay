@@ -137,16 +137,20 @@
 
       <div
         class="cards-grid"
-        style="max-width: 350px; grid-template-columns: 1fr"
+        style="
+          max-width: 100%;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+          gap: 20px;
+        "
       >
         <div class="user-card card">
           <div>
-            <button class="menu-btn" id="menuBtn">⋮</button>
-            <div class="menu-dropdown" id="menuDropdown">
-              <button class="menu-item" id="updateDetailsBtn">
+            <button class="menu-btn">⋮</button>
+            <div class="menu-dropdown">
+              <button class="menu-item update-details-btn">
                 Update Details
               </button>
-              <button class="menu-item archive-item" id="deleteUserBtn">
+              <button class="menu-item archive-item delete-user-btn">
                 Archive
               </button>
             </div>
@@ -177,6 +181,48 @@
         </div>
       </div>
     </main>
+
+    <!-- Add User Modal -->
+    <div class="modal" id="addUserModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Add New User</h2>
+          <button class="modal-close" id="addUserModalClose">&times;</button>
+        </div>
+        <form class="modal-form" id="addUserForm">
+          <div class="form-group">
+            <label for="addFullName">Full Name</label>
+            <input type="text" id="addFullName" name="fullName" required />
+          </div>
+          <div class="form-group">
+            <label for="addUsername">Username</label>
+            <input type="text" id="addUsername" name="username" required />
+          </div>
+          <div class="form-group">
+            <label for="addRole">Role</label>
+            <select id="addRole" name="role" required>
+              <option value="">Select a role</option>
+              <option value="Admin">Admin</option>
+              <option value="User">User</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Status</label>
+            <div class="status-toggle">
+              <input type="checkbox" id="addStatus" name="status" checked />
+              <label for="addStatus" class="toggle-switch"></label>
+              <span class="status-text" id="addStatusText">Active</span>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn-cancel" id="addUserCancelBtn">
+              Cancel
+            </button>
+            <button type="submit" class="btn-submit">Add User</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <!-- Update Details Modal -->
     <div class="modal" id="updateModal">
