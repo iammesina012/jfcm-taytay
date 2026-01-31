@@ -143,21 +143,24 @@
           <div>
             <button class="menu-btn" id="menuBtn">⋮</button>
             <div class="menu-dropdown" id="menuDropdown">
-              <a href="#">Update Details</a>
-              <a href="#">Delete User</a>
+              <button class="menu-item" id="updateDetailsBtn">
+                Update Details
+              </button>
+              <button class="menu-item archive-item" id="deleteUserBtn">
+                Archive
+              </button>
             </div>
           </div>
           <div
             class="user-avatar"
             style="
-              width: 80px;
-              height: 80px;
+              width: 60px;
+              height: 60px;
               border-radius: 50%;
-              background-color: #4a5e42;
               display: flex;
               align-items: center;
               justify-content: center;
-              font-size: 40px;
+              font-size: 32px;
               color: #fff;
               flex-shrink: 0;
             "
@@ -167,17 +170,79 @@
           <div class="user-info-container">
             <h3 class="user-name">James Malinao</h3>
             <p class="user-username">henreyjamesmalinao</p>
-            <p class="user-role">User</p>
+            <p class="user-role">
+              User <span class="user-status">(Active)</span>
+            </p>
           </div>
         </div>
       </div>
     </main>
 
+    <!-- Update Details Modal -->
+    <div class="modal" id="updateModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Update User Details</h2>
+          <button class="modal-close" id="updateModalClose">&times;</button>
+        </div>
+        <form class="modal-form" id="updateForm">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required />
+          </div>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="form-group">
+            <label for="role">Role</label>
+            <select id="role" name="role" required>
+              <option value="">Select a role</option>
+              <option value="Admin">Admin</option>
+              <option value="User">User</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Status</label>
+            <div class="status-toggle">
+              <input type="checkbox" id="status" name="status" checked />
+              <label for="status" class="toggle-switch"></label>
+              <span class="status-text" id="statusText">Active</span>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn-cancel" id="updateCancelBtn">
+              Cancel
+            </button>
+            <button type="submit" class="btn-submit">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Archive User Modal -->
+    <div class="modal" id="deleteModal">
+      <div class="modal-content modal-confirm">
+        <div class="modal-header">
+          <h2>Archive User</h2>
+          <button class="modal-close" id="deleteModalClose">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to archive this user?</p>
+          <p class="delete-warning">This action cannot be undone.</p>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn-cancel" id="deleteCancelBtn">
+            Cancel
+          </button>
+          <button type="button" class="btn-archive" id="deleteConfirmBtn">
+            Archive User
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script src="../dashboard/shared-script.js"></script>
     <script src="user-management.js"></script>
   </body>
 </html>
-
-
-
-
